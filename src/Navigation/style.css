@@ -1,0 +1,24 @@
+h1 {
+    color: rgb(29, 110, 110);
+    display: inline;
+    font-family: impact;
+    position: relative;
+    text-align: left;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding: 8px;
+    margin-bottom: 60px;
+    background-color: rgb(243, 223, 231);
+    width: 100%;
+    height: 50px;
+}
+
+.nav-buttons {
+    position: relative;
+    float: right;
+    margin-right: 30px;
+    height: 100%;
+}

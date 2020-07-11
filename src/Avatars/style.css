@@ -1,0 +1,15 @@
+.avatars {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 80px 2%;
+    margin-bottom: 30vh;
+}
+
+.avatar {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    margin: auto;
+    margin: 3vw;
+}
