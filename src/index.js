@@ -4,40 +4,48 @@ import './index.css';
 import {AvatarApi} from './Avatars/index.js';
 import {Nav} from './Navigation/index.js';
 
-export class InfinteScroll extends React.Component {
+let array = [];
+class InfinteScroll extends React.Component {
+    componentDidMount() {
+        setInterval(() => {
+            this.setState(() => {
+                return {unseen: "not Displayed"};
+            });
+        }, 1000);
+    }
     render() {
         let wait = false;
-        const loadMore = () => {
+        const scrollHeight = () => {
             if (!wait) {
-                
-                console.log(window.scrollY);
-
+                const scrollAt = window.scrollY;
+                const body = document.body;
+                const html = document.documentElement;
+                const height = Math.max(
+                    body.scrollHeight, body.offsetHeight,
+                    html.clientHeight, html.scrollHeight, html.offsetHeight
+                );
+                if (scrollAt >= height-750) {
+                    let newArray = Array(9).fill(<AvatarApi/>)
+                    array.push(newArray);
+                    return array;
+                }
                 wait = true;
                 setTimeout(() => { wait = false; }, 500);
-            }
+            } return array;
         };
-        const event = window.addEventListener('scroll', loadMore);
-
-        return <h2>{event}</h2>;
+        window.addEventListener('scroll', scrollHeight);
+        return scrollHeight();
     }
 }
 
 class Shop extends React.Component {
+    
     render() {
         return (
             <div className="site">
                 <Nav/>
-                 <InfinteScroll/>
-                <div className="avatars" id="avatars">
-                    <AvatarApi/>
-                    <AvatarApi/>
-                    <AvatarApi/>
-                    <AvatarApi/>
-                    <AvatarApi/>
-                    <AvatarApi/>
-                    <AvatarApi/>
-                    <AvatarApi/>
-                    <AvatarApi/>
+                <div className="avatars" id="avatars"> 
+                    <InfinteScroll/>
                 </div>
             </div>
         );
