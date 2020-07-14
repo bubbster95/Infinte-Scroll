@@ -3,7 +3,7 @@ import './style.css';
 
 let uniqId = 0;
 
-export class AvatarApi extends React.Component {
+export default class AvatarApi extends React.Component {
     render() {
         uniqId++;
         let size = 250;

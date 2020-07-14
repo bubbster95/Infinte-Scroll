@@ -1,9 +1,10 @@
 import React from 'react';
-import {AvatarApi} from './LoadMore/Avatars/index.js';
+import './style.css';
+import AvatarApi from '../Avatars/index.js';
 
 let array = [];
 
-export class InfiniteScroll extends React.Component {
+export default class InfiniteScroll extends React.Component {
     componentDidMount() {
         setInterval(() => {
             this.setState(() => {
@@ -11,6 +12,7 @@ export class InfiniteScroll extends React.Component {
             });
         }, 1000);
     }
+
     render() {
         let wait = false;
         const scrollHeight = () => {
