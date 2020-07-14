@@ -1,12 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
 import {AvatarApi} from './LoadMore/Avatars/index.js';
-import {Nav} from './Navigation/index.js';
-// import {InfiniteScroll} from './LoadMore/index.js';
 
 let array = [];
-class InfiniteScroll extends React.Component {
+
+export class InfiniteScroll extends React.Component {
     componentDidMount() {
         setInterval(() => {
             this.setState(() => {
@@ -38,18 +35,3 @@ class InfiniteScroll extends React.Component {
         return scrollHeight();
     }
 }
-
-class Shop extends React.Component {
-    
-    render() {
-        return (
-            <div className="site">
-                <Nav/>
-                <div className="avatars" id="avatars"> 
-                    <InfiniteScroll/>
-                </div>
-            </div>
-        );
-    }
-}
-ReactDOM.render(<Shop />, document.getElementById('root'));
