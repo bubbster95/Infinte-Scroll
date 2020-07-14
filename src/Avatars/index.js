@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import WordGenerator from './random.js';
 
 let uniqId = 0;
 
@@ -11,6 +12,7 @@ export default class AvatarApi extends React.Component {
         return (
             <div className="avatar">
                 <img src={image} alt="Adorable API" id={uniqId}/>
+                <h2><WordGenerator/></h2>
             </div>
         );
     }
