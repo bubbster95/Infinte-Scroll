@@ -1,19 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './index.css';
-import {Nav} from './Navigation/index.js';
-import InfiniteScroll from './LoadMore/index.js';
+import Nav from './Navigation/index.js';
+import Cart from './Pages/cart.js';
+import Shop from './Pages/shop.js';
+import Login from './Pages/login.js'
 
-class Shop extends React.Component {
+class Site extends React.Component {
     render() {
         return (
-            <div className="site">
+            <Router>
                 <Nav/>
-                <div className="avatars" id="avatars"> 
-                    <InfiniteScroll/>
+                <div className="site">
+                    <Route exact path="/" component={Shop}/>
+                    <Route path="/cart" component={Cart}/>
+                    <Route path="/login" component={Login}/>
                 </div>
-            </div>
+            </Router>
         );
     }
 }
-ReactDOM.render(<Shop />, document.getElementById('root'));
+
+ReactDOM.render(<Site />, document.getElementById('root'));

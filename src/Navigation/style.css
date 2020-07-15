@@ -3,6 +3,7 @@ h1 {
     display: inline;
     font-family: impact;
     position: relative;
+    z-index: 1;
     text-align: left;
 }
 .nav {
@@ -21,4 +22,21 @@ h1 {
     float: right;
     margin-right: 30px;
     height: 100%;
+}
+
+.buttons {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: rgb(29, 110, 110);
+    font-family: impact;
+    font-size: 120%;
+    height: 100%;
+    padding: 10px;
+}
+
+button:hover {
+    border-color: lightpink;
+    /* border-bottom: lightpink; */
 }
