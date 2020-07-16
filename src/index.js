@@ -8,6 +8,7 @@ import Shop from './Pages/shop.js';
 import Login from './Pages/login.js'
 
 class Site extends React.Component {
+
     render() {
         return (
             <Router>
