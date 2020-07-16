@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css';
 import AvatarApi from '../Avatars/index.js';
 
 let array = [];
