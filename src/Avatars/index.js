@@ -7,8 +7,6 @@ let uniqId = 0;
 export default class AvatarApi extends React.Component {
     state = {show: false}; 
     showModal = () => {
-        // let newId = uniqId;
-        uniqId-=uniqId - 1;
         this.setState({show: !this.state.show});
     };
     render() {

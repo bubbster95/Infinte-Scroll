@@ -3,6 +3,7 @@ import '../index.css';
 import InfiniteScroll from '../LoadMore/index.js';
 
 export default class Shop extends React.Component {
+    
     render() {
         return (
             <div className="avatars" id="avatars">
