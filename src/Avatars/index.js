@@ -8,7 +8,6 @@ export default class AvatarApi extends React.Component {
         uniqId++;
         let size = 250;
         let image = `https://api.adorable.io/avatars/` + size + `/` + uniqId + `@adorable.png`;
-        let modalId = "modle" + uniqId;
         return (
             <div className="avatar">
                 <img src={image} alt="Adorable API" id={uniqId}/>
