@@ -23,7 +23,7 @@ export default class InfiniteScroll extends React.Component {
                     body.scrollHeight, body.offsetHeight,
                     html.clientHeight, html.scrollHeight, html.offsetHeight
                 );
-                if (scrollAt >= height-750) {
+                if (scrollAt >= height - window.innerHeight) {
                     let newArray = Array(9).fill(<AvatarApi/>)
                     array.push(newArray);
                     return array;
