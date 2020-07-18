@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import WordGenerator from './random.js';
+import LikesGenerator from './ramdomLikes.js';
 
 let uniqId = 0;
 export default class AvatarApi extends React.Component {
@@ -12,6 +13,7 @@ export default class AvatarApi extends React.Component {
             <div className="avatar">
                 <img src={image} alt="Adorable API" id={uniqId}/>
                 <h2><WordGenerator/></h2>
+                <h3><LikesGenerator/></h3>
             </div>
         );
     }
