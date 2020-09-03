@@ -1,40 +1,22 @@
-.avatars {
-    position: absolute;
-    height: 100%;
+.content {
     width: 100%;
-    margin: auto;
-    padding-top: 80px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.avatar, h2, h3 {
-    margin: auto;
+.avatars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+.avatar {
     margin-bottom: 10px;
     text-align: center;
-    align-content: center;
-    /* position: ; */
-    display: inline-block;
-    z-index: 1;
-    width: 33.33%;
 }
-
-@media only screen and (min-width: 1055px) {
-    .avatar, h2, h3 {
-        width: 25%;
-    }
-  }
-
-  @media only screen and (max-width: 840px) {
-    .avatar, h2, h3 {
-        width: 50%;
-    }
-  }
- 
-  @media only screen and (max-width: 510px) {
-    .avatar, h2, h3 {
-        width: 90%;
-    }
-  }  
 
 h2, h3 {
     text-align: left;
@@ -43,11 +25,14 @@ h2, h3 {
     width: 240px;
     top: -28px;
     border-radius: 0px 0px 5px 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 h2 {
     white-space: nowrap;
-    background-color: lightsalmon;
+    background-color: white;
     height: 30px;
     overflow-y: auto;
     padding: 0px 5px;
@@ -55,7 +40,7 @@ h2 {
 }
 
 h3 {
-    background-color: lightblue;
+    background-color: lightskyblue;
     padding: 10px 5px;
     z-index: -1;
 }
